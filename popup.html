@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Safe Zone Overlay</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#14141a; --mut:#5b5b68; --acc:#e11d48; --line:#e4e4ea; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16161c; --fg:#f3f3f7; --mut:#a2a2b0; --acc:#fb5a7a; --line:#2c2c36; } }
+  * { box-sizing: border-box; }
+  body { margin:0; width:320px; padding:16px; background:var(--bg); color:var(--fg); font:13px/1.45 system-ui, "Segoe UI", Arial, sans-serif; }
+  h1 { margin:0 0 4px; font-size:15px; }
+  p { margin:0 0 12px; color:var(--mut); }
+  button { width:100%; padding:10px 12px; border:0; border-radius:8px; background:var(--acc); color:#fff; font:600 13px system-ui, Arial, sans-serif; cursor:pointer; }
+  button:focus-visible, a:focus-visible { outline:2px solid var(--fg); outline-offset:2px; }
+  button[disabled] { opacity:.5; cursor:default; }
+  table { width:100%; border-collapse:collapse; margin:14px 0 10px; }
+  td { padding:5px 0; border-top:1px solid var(--line); }
+  td:last-child { text-align:right; font-variant-numeric: tabular-nums; }
+  .note { font-size:12px; margin:0 0 8px; }
+  a { color:var(--acc); }
+  #status { min-height:18px; margin:10px 0 0; font-size:12px; }
+</style></head>
+<body>
+  <h1>Safe zone for vertical video</h1>
+  <p>Draws the Reels, TikTok and Shorts margins over the largest video on this page.</p>
+  <button id="toggle" type="button">Show the safe zone</button>
+  <div id="status" role="status" aria-live="polite"></div>
+  <table aria-label="Margins at 1080 x 1920">
+    <tr><td>Top</td><td>270 px</td></tr>
+    <tr><td>Bottom</td><td>480 px</td></tr>
+    <tr><td>Right</td><td>140 px</td></tr>
+    <tr><td>Left</td><td>60 px</td></tr>
+  </table>
+  <p class="note">Works on any page with a video: a cloud drive, a review tool or an unlisted upload. Apps change their layouts, so check a draft in the real app too.</p>
+  <p class="note"><a href="https://vaghelabhavesh.com/safe-zone-template.html" target="_blank" rel="noopener">Free PNG and SVG template</a> for your editing timeline</p>
+  <script src="popup.js"></script>
+</body></html>
