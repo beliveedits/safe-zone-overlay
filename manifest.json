@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Safe Zone Overlay for Vertical Video",
+  "version": "1.0.0",
+  "description": "Draw Reels, TikTok and Shorts safe-zone margins on top of any video preview, so you can see what the app buttons will cover.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Show or hide the safe zone",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "homepage_url": "https://vaghelabhavesh.com/safe-zone-template.html"
+}
